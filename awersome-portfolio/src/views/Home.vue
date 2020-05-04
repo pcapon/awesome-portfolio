@@ -1,18 +1,68 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="cover">
+      <div class="home-message">
+        <span class="hello">Hello !</span>
+        <span class="name">I'm Pierre Capon</span>
+        <span class="bio">
+          I'm a web developer, music producer, technology enthusiast, web design enthusiast.
+        </span>
+      </div>
+      <img
+        class="profile-picture"
+        alt="profile picture"
+        src="../assets/pp.png"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  }
+  name: "Home"
 };
 </script>
+
+<style lang="scss">
+@import "../style/var.scss";
+@import "../style/fonts.scss";
+@import "../style/animation.scss";
+
+.home {
+  display: flex;
+  justify-content: center;
+  .cover {
+    margin-top: 100px;
+    position: relative;
+    width: 1300px;
+    .home-message {
+      position: relative;
+      z-index: 1;
+      text-align: left;
+      font-family: "yeseva";
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .hello {
+        color: $color-grey;
+        font-size: 70px;
+        font-weight: 600;
+        animation: upAndDown 2s infinite 0s ease-in-out;
+      }
+      .name {
+        color: $color-blue;
+        font-size: 130px;
+        font-weight: 900;
+      }
+    }
+    .profile-picture {
+      position: absolute;
+      max-height: 400px;
+      border-radius: 50%;
+      right: 0px;
+      top: 50px;
+    }
+  }
+}
+</style>
