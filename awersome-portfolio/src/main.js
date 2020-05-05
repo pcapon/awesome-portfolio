@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 Vue.config.productionTip = false;
+Vue.prototype.$AOS = AOS;
 
 new Vue({
   created() {

@@ -2,25 +2,14 @@
   <div class="home" v-on:scroll="handleScroll">
     <div class="cover pannel">
       <div class="home-message">
-        <span data-aos="fade-left" data-aos-duration="3000" class="hello"
-          >Hello !</span
-        >
-        <span
-          data-aos="fade-right"
-          data-aos-duration="3000"
-          data-aos-delay="100"
-          class="name"
-          >I'm Pierre Capon</span
-        >
-        <span data-aos="fade" data-aos-delay="2000" class="bio simple-text">
+        <span class="hello">Hello !</span>
+        <span class="name">I'm Pierre Capon.</span>
+        <span class="bio simple-text">
           I'm a web developer, music producer, technology enthusiast, web design
           enthusiast.
         </span>
       </div>
       <img
-        data-aos="fade-left"
-        data-aos-duration="3000"
-        data-aos-delay="300"
         class="profile-picture"
         alt="profile picture"
         src="../assets/pp.png"
@@ -66,7 +55,7 @@ export default {
       position: relative;
       z-index: 1;
       text-align: left;
-      font-family: "yeseva";
+      font-family: Helvetica, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: flex-start;

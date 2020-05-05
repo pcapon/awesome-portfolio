@@ -21,9 +21,7 @@ export default {
 @import "./style/var.scss";
 
 #app {
-  h1 {
-    font-family: "yeseva";
-  }
+  font-family: Helvetica, sans-serif;
   a {
     font-weight: bold;
     color: #312cae;
