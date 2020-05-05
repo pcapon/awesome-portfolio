@@ -2,14 +2,25 @@
   <div class="home">
     <div class="cover">
       <div class="home-message">
-        <span class="hello">Hello !</span>
-        <span class="name">I'm Pierre Capon</span>
-        <span class="bio">
+        <span data-aos="fade-left" data-aos-duration="3000" class="hello"
+          >Hello !</span
+        >
+        <span
+          data-aos="fade-right"
+          data-aos-duration="3000"
+          data-aos-delay="100"
+          class="name"
+          >I'm Pierre Capon</span
+        >
+        <span data-aos="fade" data-aos-delay="2000" class="bio">
           I'm a web developer, music producer, technology enthusiast, web design
           enthusiast.
         </span>
       </div>
       <img
+        data-aos="fade-left"
+        data-aos-duration="3000"
+          data-aos-delay="300"
         class="profile-picture"
         alt="profile picture"
         src="../assets/pp.png"
