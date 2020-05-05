@@ -29,7 +29,7 @@ export default {
   name: "Home",
   methods: {
     handleScroll: function(event) {
-      console.log(event);
+      console.log(event.target.scrollTop);
     }
   }
 };
