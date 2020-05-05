@@ -50,6 +50,7 @@ export default {
 @import "../style/animation.scss";
 
 .home {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +58,7 @@ export default {
   .cover {
     margin-top: 100px;
     position: relative;
-    width: 1300px;
+    width: 100%;
     .home-message {
       position: relative;
       z-index: 1;
@@ -68,23 +69,24 @@ export default {
       align-items: flex-start;
       .hello {
         color: $color-grey;
-        font-size: 70px;
+        font-size: 40px;
         font-weight: 600;
         animation: upAndDown 2s infinite 0s ease-in-out;
       }
       .name {
         color: $color-blue;
-        font-size: 130px;
+        font-size: 80px;
         font-weight: 900;
       }
       .bio {
+        padding-top: 30px;
         font-family: Helvetica, sans-serif;
         font-size: 20px;
       }
     }
     .profile-picture {
       position: absolute;
-      max-height: 400px;
+      max-height: 200px;
       border-radius: 50%;
       right: 0px;
       top: 50px;
