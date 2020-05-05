@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <div class="cover">
+  <div class="home" v-on:scroll="handleScroll">
+    <div class="cover pannel">
       <div class="home-message">
         <span data-aos="fade-left" data-aos-duration="3000" class="hello"
           >Hello !</span
@@ -12,7 +12,7 @@
           class="name"
           >I'm Pierre Capon</span
         >
-        <span data-aos="fade" data-aos-delay="2000" class="bio">
+        <span data-aos="fade" data-aos-delay="2000" class="bio simple-text">
           I'm a web developer, music producer, technology enthusiast, web design
           enthusiast.
         </span>
@@ -20,27 +20,29 @@
       <img
         data-aos="fade-left"
         data-aos-duration="3000"
-          data-aos-delay="300"
+        data-aos-delay="300"
         class="profile-picture"
         alt="profile picture"
         src="../assets/pp.png"
       />
     </div>
-    <!-- <div class="description">
-      Passionate about web development and curious about all that is done in
-      terms of new technologies. I like to try new technologies to realize my
-      various projects always to try to satisfy my desire of creation and my
-      insatiable curiosity. I like to combine my passion for computer science
-      with my other passions, such as electronic music production, design,
-      cinema, photography by creating different projects around these universes.
-    </div> -->
+    <bio class="pannel" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import Bio from "./Bio.vue";
+
 export default {
-  name: "Home"
+  components: {
+    Bio
+  },
+  name: "Home",
+  methods: {
+    handleScroll: function(event) {
+      console.log(event);
+    }
+  }
 };
 </script>
 
@@ -50,15 +52,16 @@ export default {
 @import "../style/animation.scss";
 
 .home {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: calc(100vh - 60px);
+  padding: 0 20px;
+  background-color: #fff3f7;
+  overflow-y: scroll;
+  overflow-x: hidden;
   .cover {
-    margin-top: 100px;
     position: relative;
     width: 100%;
+    height: 100vh;
+
     .home-message {
       position: relative;
       z-index: 1;
@@ -80,8 +83,6 @@ export default {
       }
       .bio {
         padding-top: 30px;
-        font-family: Helvetica, sans-serif;
-        font-size: 20px;
       }
     }
     .profile-picture {

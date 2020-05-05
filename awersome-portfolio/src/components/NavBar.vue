@@ -22,11 +22,12 @@ export default {
 @import "../style/var.scss";
 
 .navbar {
-  padding: 10px 10vw;
+  background-color: #c3c8d6;
+  height: 60px;
+  padding: 0 10vw;
   color: $color-blue;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  border-bottom: solid 1px $color-grey;
 }
 </style>
