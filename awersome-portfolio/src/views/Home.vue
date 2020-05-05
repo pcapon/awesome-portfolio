@@ -5,7 +5,8 @@
         <span class="hello">Hello !</span>
         <span class="name">I'm Pierre Capon</span>
         <span class="bio">
-          I'm a web developer, music producer, technology enthusiast, web design enthusiast.
+          I'm a web developer, music producer, technology enthusiast, web design
+          enthusiast.
         </span>
       </div>
       <img
@@ -14,6 +15,14 @@
         src="../assets/pp.png"
       />
     </div>
+    <!-- <div class="description">
+      Passionate about web development and curious about all that is done in
+      terms of new technologies. I like to try new technologies to realize my
+      various projects always to try to satisfy my desire of creation and my
+      insatiable curiosity. I like to combine my passion for computer science
+      with my other passions, such as electronic music production, design,
+      cinema, photography by creating different projects around these universes.
+    </div> -->
   </div>
 </template>
 
@@ -31,7 +40,9 @@ export default {
 
 .home {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   .cover {
     margin-top: 100px;
     position: relative;
@@ -54,6 +65,10 @@ export default {
         color: $color-blue;
         font-size: 130px;
         font-weight: 900;
+      }
+      .bio {
+        font-family: Helvetica, sans-serif;
+        font-size: 20px;
       }
     }
     .profile-picture {
